@@ -1,0 +1,67 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: animation1, animation2;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+  /* delay - задержка перед стартом */
+  animation-direction: alternate;
+  /* должна ли воспроизводиться вперед или назад */
+  animation-fill-mode: forwards;
+  /* forwards - сохраняет блок на своем месте. после перемещения */
+  animation-play-state: paused;
+  animation-play-state: running;
+  /* play-state  - играем с состоянием */
+  animation-timing-function: cubic-bezier(0,1.04,1,.58);
+  /* на сайте cubic-bezier подсказывает значения, чтобы применить анимацию */
+  
+}
+/*  ключевое слово для определения анимации и задать имя */
+@keyframes animation1 {
+    0% {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+    50% {
+        height: 500px;
+
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        background-color: aquamarine;
+    }
+/*  тоже самое что from и to. преимущество % можем помимо 0 и 100 ставить другой процент */
+
+
+
+
+  /* c какого состояния задавать
+  from {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+  /* и каким заканчиваешь */
+  /* to {
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+  }  */
+}
+
+/* в обратную сторону */
+@keyframes animation2 {
+  /* c какого состояния задавать */
+  from {
+    margin-left: 0;
+  }
+  /* и каким заканчиваешь */
+  to {
+    margin-left: 500px;
+  }
+
+}
